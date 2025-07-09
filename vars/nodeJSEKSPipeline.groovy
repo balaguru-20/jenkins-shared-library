@@ -33,6 +33,15 @@ def call(Map configMap){
                     }
                 }
             }
+            stage('Unit test'){
+                steps{
+                    script{
+                        sh """
+                            echo "Unit tests created by developers, we will configure the command klike npm test"
+                        """
+                    }
+                }
+            }
             /* stage('Run Sonarqube'){
                 environment{
                     scannerHome = tool 'sonar-scanner-7.1'
